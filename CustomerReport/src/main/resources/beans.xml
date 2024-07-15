@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Address bean definition -->
+    <bean id="address" class="com.Springboot.Address">
+        <property name="street" value="Hinjewadi"/>
+        <property name="city" value="Pune"/>
+        <property name="state" value="Maharashtra"/>
+        <property name="zip" value="26545"/>
+        <property name="country" value="India"/>
+    </bean>
+
+    <!-- Customer bean definition with setter injection -->
+    <bean id="customer" class="com.Springboot.Customer">
+        <property name="customerId" value="1"/>
+        <property name="customerName" value="Rahul Mhatre"/>
+        <property name="customerContact" value="123-456-7890"/>
+        <property name="customerAddress" ref="address"/>
+    </bean>
+
+</beans>

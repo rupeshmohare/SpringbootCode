@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="questionList" class="com.Springboot.Question">
+        <property name="questionId" value="1"/>
+        <property name="question" value="What are your favorite colors?"/>
+        <property name="listAnswers">
+            <list>
+                <value>Red</value>
+                <value>Blue</value>
+                <value>Green</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="questionSet" class="com.Springboot.Question">
+        <property name="questionId" value="2"/>
+        <property name="question" value="What are your hobbies?"/>
+        <property name="setAnswers">
+            <set>
+                <value>Reading</value>
+                <value>Traveling</value>
+                <value>Cooking</value>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="questionMap" class="com.Springboot.Question">
+        <property name="questionId" value="3"/>
+        <property name="question" value="What is your daily routine?"/>
+        <property name="mapAnswers">
+            <map>
+                <entry key="1" value="Wake up"/>
+                <entry key="2" value="Exercise"/>
+                <entry key="3" value="Breakfast"/>
+                <entry key="4" value="Work"/>
+                <entry key="5" value="Sleep"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>
